@@ -52,7 +52,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed z-50 w-screen px-4 md:px-16 bg-primary">
+    <header className="fixed z-50 w-screen px-4 md:px-16  bg-green-800">
       {/* desktop & tablet */}
       <div className="hidden md:flex w-full items-center justify-between">
         <Link to={"/"} className="flex items-center gap-2">
@@ -67,24 +67,27 @@ const Header = () => {
             className="flex items-center gap-24 "
           >
             <Link to={"/"}>
-              <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
+              <li className="text-lg  text-white duration-100 transition-all ease-in-out cursor-pointer ">
                 Trang chủ
               </li>
             </Link>
-
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Granola
-            </li>
-            <li className="text-lg text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer">
-              Liên hệ
-            </li>
+            <Link to={"/about"}>
+              <li className="text-lg text-white  duration-100 transition-all ease-in-out cursor-pointer">
+                Granola
+              </li>
+            </Link>
+            <Link to={"/contact"}>
+              <li className="text-lg text-white  duration-100 transition-all ease-in-out cursor-pointer">
+                Liên hệ
+              </li>
+            </Link>
           </motion.ul>
 
           <div
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center "
             onClick={showCart}
           >
-            <MdShoppingBasket className="text-textColor text-2xl  cursor-pointer" />
+            <MdShoppingBasket className="text-white text-2xl  cursor-pointer" />
             {cartItems && cartItems.length > 0 && (
               <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
                 <p className="text-xs text-white font-semibold">
@@ -109,7 +112,7 @@ const Header = () => {
                 exit={{ opacity: 0, scale: 0.6 }}
                 className=" w-48 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute top-12 right-0"
               >
-                {user && user.email === "thanhpot88@gmail.com" && (
+                {user && user.email === "phamthuy9a1pcx3@gmail.com" && (
                   <Link
                     to={"/createItem"}
                     className="flex flex-row items-center justify-between cursor-pointer  hover:bg-slate-100 transition-all duration-100 ease-in-out"

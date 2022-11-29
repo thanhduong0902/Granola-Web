@@ -8,6 +8,7 @@ import { actionType } from "../context/reducer";
 import EmptyCart from "../img/emptyCart.svg";
 import CartItem from "./CartItem";
 import { ConvertMoney } from "../utils/ConvertMoney";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
   const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
@@ -68,9 +69,9 @@ const CartContainer = () => {
             {/* cart Item */}
             {cartItems &&
               cartItems.length > 0 &&
-              cartItems.map((item) => (
+              cartItems.map((item, index) => (
                 <CartItem
-                  key={item.id}
+                  key={index}
                   item={item}
                   setFlag={setFlag}
                   flag={flag}
@@ -95,8 +96,7 @@ const CartContainer = () => {
                 {ConvertMoney(tot)} VNĐ
               </p>
             </div>
-
-            {user ? (
+            <Link to="/checkout">
               <motion.button
                 whileTap={{ scale: 0.8 }}
                 type="button"
@@ -104,15 +104,7 @@ const CartContainer = () => {
               >
                 Thanh toán
               </motion.button>
-            ) : (
-              <motion.button
-                whileTap={{ scale: 0.8 }}
-                type="button"
-                className="w-full p-2 rounded-full bg-gradient-to-tr from-lime-400 to-lime-600 text-gray-50 text-lg my-2 hover:shadow-lg"
-              >
-                Thanh toán
-              </motion.button>
-            )}
+            </Link>
           </div>
         </div>
       ) : (
