@@ -7,7 +7,7 @@ const Checkout = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
-  const [message, setMessage] = useState();
+  
   const [success, setSuccess] = useState(false);
   const [fields, setFields] = useState(false);
   const [location, setLocation] = useState();
