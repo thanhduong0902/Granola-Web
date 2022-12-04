@@ -5,7 +5,7 @@ import NotFound from "../img/NotFound.svg";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 import { ConvertMoney } from "../utils/ConvertMoney";
-
+import Swal from "sweetalert2";
 const RowContainer = ({ flag, data, scrollValue }) => {
   const rowContainer = useRef();
 
@@ -42,7 +42,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
         data.map((item) => (
           <div
             key={item?.id}
-            className="w-300 h-[200px] min-w-[300px] md:w-300 md:min-w-[300px]  bg-cardOverlay rounded-lg py-2 px-4  my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative"
+            className="w-300 h-[220px] min-w-[300px] md:w-300 md:min-w-[300px]  bg-cardOverlay rounded-lg py-2 px-4  my-12 backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-evenly relative"
           >
             <div className="w-full flex items-center justify-between">
               <motion.div
@@ -58,7 +58,13 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               <motion.div
                 whileTap={{ scale: 0.75 }}
                 className="w-8 h-8 rounded-full bg-lime-600 flex items-center justify-center cursor-pointer hover:shadow-md -mt-8"
-                onClick={() => setItems([...cartItems, item])}
+                onClick={() => {
+                  setItems([...cartItems, item]);
+                  Swal.fire({
+                    icon: "success",
+                    title: "Đã thêm vào giỏ hàng",
+                  });
+                }}
               >
                 <MdShoppingBasket className="text-white" />
               </motion.div>
