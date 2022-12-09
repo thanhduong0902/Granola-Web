@@ -7,7 +7,7 @@ import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
 
 const MenuContainer = () => {
-  const [filter, setFilter] = useState("granola-1");
+  const [filter, setFilter] = useState("combo");
 
   const [{ foodItems }, dispatch] = useStateValue();
 
@@ -60,7 +60,7 @@ const MenuContainer = () => {
         <div className="w-full">
           <RowContainer
             flag={false}
-            data={foodItems?.filter((n) => n.category === filter)}
+            data={foodItems?.filter((n) => n.category.includes(filter))}
           />
         </div>
       </div>

@@ -174,7 +174,7 @@ const CreateContainer = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Tên sản phẩm"
-            className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor"
+            className="w-full h-full text-lg bg-transparent outline-none border-none placeholder:text-gray-400 text-textColor p-2"
           />
         </div>
 

@@ -7,7 +7,7 @@ const Checkout = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
-  
+
   const [success, setSuccess] = useState(false);
   const [fields, setFields] = useState(false);
   const [location, setLocation] = useState();
@@ -21,7 +21,6 @@ const Checkout = () => {
       !email ||
       !name ||
       !phone ||
-      !location ||
       !email.includes("@gmail.com") ||
       validatePhone(phone)
     )
@@ -73,7 +72,7 @@ const Checkout = () => {
           <span className="font-bold">Tên</span>
           <input
             value={name}
-            className=" w-96 h-10 border border-gray-300 rounded-lg"
+            className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
             onChange={(e) => {
               setName(e.target.value);
             }}
@@ -83,7 +82,7 @@ const Checkout = () => {
           <span className="font-bold">Địa chỉ Email</span>
           <input
             value={email}
-            className=" w-96 h-10 border border-gray-300 rounded-lg"
+            className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -93,7 +92,7 @@ const Checkout = () => {
           <span className="font-bold">Số điện thoại</span>
           <input
             value={phone}
-            className=" w-96 h-10 border border-gray-300 rounded-lg"
+            className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
             onChange={(e) => {
               setPhone(e.target.value);
             }}
@@ -103,7 +102,7 @@ const Checkout = () => {
           <span className="font-bold">Địa chỉ chi tiết</span>
           <input
             value={location}
-            className=" w-96 h-10 border border-gray-300 rounded-lg"
+            className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
             onChange={(e) => {
               setLocation(e.target.value);
             }}

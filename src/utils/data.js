@@ -37,27 +37,27 @@ export const heroData = [
 export const categories = [
   {
     id: 1,
-    name: "Granola-1",
-    urlParamName: "granola-1",
+    name: "Combo",
+    urlParamName: "combo",
   },
   {
     id: 2,
-    name: "Granola-2",
-    urlParamName: "granola-2",
+    name: "Hạt đơn",
+    urlParamName: "hạt đơn",
   },
   {
     id: 3,
-    name: "Granola-3",
-    urlParamName: "granola-3",
+    name: "Biscotti",
+    urlParamName: "biscotti",
   },
   {
     id: 4,
-    name: "Granola-4",
-    urlParamName: "granola-4",
+    name: "Trà ngũ cốc",
+    urlParamName: "trà ngũ cốc",
   },
   {
     id: 5,
-    name: "Granola-5",
-    urlParamName: "granola-5",
+    name: "Mỳ chũ",
+    urlParamName: "mỳ chũ",
   },
 ];

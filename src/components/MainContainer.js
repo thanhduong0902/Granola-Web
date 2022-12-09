@@ -43,14 +43,13 @@ const MainContainer = () => {
         <RowContainer
           scrollValue={scrollValue}
           flag={true}
-          data={foodItems?.filter((n) => n.category === "granola-1")}
+          data={foodItems?.filter((n) => n.category.includes("favorite"))}
         />
       </section>
 
       <MenuContainer />
 
       {cartShow && <CartContainer />}
-      
     </div>
   );
 };

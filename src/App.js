@@ -15,7 +15,8 @@ import { useStateValue } from "./context/StateProvider";
 import { getAllFoodItems } from "./utils/firebaseFunctions";
 import { actionType } from "./context/reducer";
 import About from "./components/About";
-import Auth from "./components/Login";
+
+import { fetchCart } from "./utils/fetchLocalStorageData";
 
 const App = () => {
   const [{ foodItems }, dispatch] = useStateValue();
@@ -28,6 +29,7 @@ const App = () => {
       });
     });
   };
+  //console.log("cart", fetchCart());
 
   useEffect(() => {
     fetchData();
@@ -37,10 +39,9 @@ const App = () => {
     <AnimatePresence exitBeforeEnter>
       <div className="w-screen flex flex-col bg-primary overflow-hidden">
         <Header />
-
         <main className="mt-14 md:mt-20 px-4 md:px-16 py-4 w-full">
           <Routes>
-            <Route path="/*" element={<MainContainer />} />
+            <Route path="/" element={<MainContainer />} />
             <Route path="/signin" element={<Login />} />
             <Route path="/signup" element={<SingUp />} />
             <Route path="/createItem" element={<CreateContainer />} />

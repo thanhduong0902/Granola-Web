@@ -45,7 +45,7 @@ const Contact = () => {
             <span className="font-bold">Tên</span>
             <input
               value={name}
-              className=" w-96 h-10 border border-gray-300 rounded-lg"
+              className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
               onChange={(e) => {
                 setName(e.target.value);
               }}
@@ -55,7 +55,7 @@ const Contact = () => {
             <span className="font-bold">Địa chỉ Email</span>
             <input
               value={email}
-              className=" w-96 h-10 border border-gray-300 rounded-lg"
+              className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
               onChange={(e) => {
                 setEmail(e.target.value);
               }}
@@ -65,7 +65,7 @@ const Contact = () => {
             <span className="font-bold">Số điện thoại</span>
             <input
               value={phone}
-              className=" w-96 h-10 border border-gray-300 rounded-lg"
+              className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
               onChange={(e) => {
                 setPhone(e.target.value);
               }}
@@ -75,7 +75,7 @@ const Contact = () => {
             <p className="font-bold">Nội dung</p>
             <textarea
               value={message}
-              className=" w-96 h-32 border border-gray-300 rounded-lg"
+              className=" w-96 h-32 border border-gray-300 rounded-lg p-2"
               onChange={(e) => {
                 setMessage(e.target.value);
               }}

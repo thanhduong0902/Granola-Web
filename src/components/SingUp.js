@@ -35,7 +35,7 @@ const SingUp = () => {
         <p className="text-xl font-bold">Email</p>
         <input
           value={email}
-          className=" w-96 h-10 border border-gray-300 rounded-lg"
+          className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
           onChange={(e) => {
             setEmail(e.target.value);
           }}
@@ -43,7 +43,8 @@ const SingUp = () => {
         <p className="text-xl font-bold">Mật khẩu</p>
         <input
           value={password}
-          className=" w-96 h-10 border border-gray-300 rounded-lg"
+          type="password"
+          className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
@@ -51,7 +52,8 @@ const SingUp = () => {
         <p className="text-xl font-bold">Nhập lại mật khẩu</p>
         <input
           value={cfpassword}
-          className=" w-96 h-10 border border-gray-300 rounded-lg"
+          type="password"
+          className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
           onChange={(e) => {
             setCfPassword(e.target.value);
           }}

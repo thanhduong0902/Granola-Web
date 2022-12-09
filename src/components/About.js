@@ -125,8 +125,11 @@ const About = () => {
         </span>
       </div>
       <div className="w-[60%] flex flex-row items center justify-center">
-        {data.map((item) => (
-          <div className="flex flex-col items-center justify-start mx-5">
+        {data.map((item, index) => (
+          <div
+            className="flex flex-col items-center justify-start mx-5"
+            key={index}
+          >
             <motion.img
               whileHover={{ scale: 1.2 }}
               transition={{

@@ -31,6 +31,7 @@ const Header = () => {
   const logout = () => {
     setIsMenu(false);
     localStorage.clear();
+    
 
     dispatch({
       type: actionType.SET_USER,
@@ -54,7 +55,7 @@ const Header = () => {
         </Link>
 
         <div className="flex items-center gap-8">
-          <motion.ul
+          <motion.ul // animation
             initial={{ opacity: 0, x: 200 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 200 }}
@@ -81,7 +82,9 @@ const Header = () => {
             className="relative flex items-center justify-center "
             onClick={showCart}
           >
+            {/* icon trong thu vien react-icons */}
             <MdShoppingBasket className="text-white text-2xl  cursor-pointer" />
+            {/* show so luong trong gio hang */}
             {cartItems && cartItems.length > 0 && (
               <div className=" absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
                 <p className="text-xs text-white font-semibold">

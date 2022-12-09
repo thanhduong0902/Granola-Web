@@ -43,22 +43,23 @@ const Login = () => {
         <p className="text-xl font-bold">Email</p>
         <input
           value={emaillog}
-          className=" w-96 h-10 border border-gray-300 rounded-lg"
+          className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
           onChange={(e) => {
             setEmaillog(e.target.value);
           }}
         />
         <p className="text-xl font-bold">Mật khẩu</p>
         <input
+          type="password"
           value={passwordlog}
-          className=" w-96 h-10 border border-gray-300 rounded-lg"
+          className=" w-96 h-10 border border-gray-300 rounded-lg p-2"
           onChange={(e) => {
             setPasswordlog(e.target.value);
           }}
         />
         <button
           onClick={singin}
-          className=" w-40 h-10 bg-lime-500 rounded-lg text-white"
+          className=" w-40 h-10 bg-lime-500 rounded-lg text-white p-2"
         >
           Đăng nhập
         </button>
